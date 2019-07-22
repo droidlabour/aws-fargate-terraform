@@ -30,9 +30,9 @@ resource "aws_security_group" "fargate" {
 
 resource "aws_security_group_rule" "fargate_http" {
   type                     = "ingress"
-  from_port                = 80
-  to_port                  = 80
-  protocol                 = "tcp"
+  from_port                = 0
+  to_port                  = 0
+  protocol                 = "-1"
   security_group_id        = "${aws_security_group.fargate.id}"
   source_security_group_id = "${aws_security_group.alb.id}"
 }
