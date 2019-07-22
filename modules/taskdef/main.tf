@@ -1,8 +1,9 @@
 data "template_file" "container_def" {
   template = "${file("resources/container_def.json")}"
   vars = {
-    name  = var.taskdef_name
-    image = var.ecr_image
+    name           = var.taskdef_name
+    image          = var.ecr_image
+	container_port = var.container_port
   }
 }
 

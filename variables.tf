@@ -38,6 +38,22 @@ variable "app_name_4" {
   default = "tony"
 }
 
+variable "app_container_port_1" {
+  default = "80"
+}
+
+variable "app_container_port_2" {
+  default = "80"
+}
+
+variable "app_container_port_3" {
+  default = "80"
+}
+
+variable "app_container_port_4" {
+  default = "8080"
+}
+
 variable "app_path_1" {
   default = "/v1*"
 }
@@ -63,9 +79,9 @@ variable "ecr_2" {
 }
 
 variable "ecr_3" {
-  default = "142700881312.dkr.ecr.us-east-1.amazonaws.com/v3:latest"
+  default = "tutum/hello-world:latest"
 }
 
 variable "ecr_4" {
-  default = "142700881312.dkr.ecr.us-east-1.amazonaws.com/v4:latest"
+  default = "mrbarker/python-flask-hello:latest"
 }

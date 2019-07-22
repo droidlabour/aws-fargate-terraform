@@ -5,3 +5,7 @@ variable "taskdef_name" {
 variable "ecr_image" {
   description = "AWS ECR URI"
 }
+
+variable "container_port" {
+  description = "Fargate container port"
+}

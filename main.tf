@@ -30,30 +30,34 @@ module "alb" {
 
 
 module "taskdef_1" {
-  source       = "./modules/taskdef"
-  ecr_image    = var.ecr_1
-  taskdef_name = var.app_name_1
+  source               = "./modules/taskdef"
+  ecr_image            = var.ecr_1
+  taskdef_name         = var.app_name_1
+  container_port       = var.app_container_port_1
 }
 
 
 module "taskdef_2" {
-  source       = "./modules/taskdef"
-  ecr_image    = var.ecr_2
-  taskdef_name = var.app_name_2
+  source               = "./modules/taskdef"
+  ecr_image            = var.ecr_2
+  taskdef_name         = var.app_name_2
+  container_port       = var.app_container_port_2
 }
 
 
 module "taskdef_3" {
-  source       = "./modules/taskdef"
-  ecr_image    = var.ecr_3
-  taskdef_name = var.app_name_3
+  source               = "./modules/taskdef"
+  ecr_image            = var.ecr_3
+  taskdef_name         = var.app_name_3
+  container_port       = var.app_container_port_3
 }
 
 
 module "taskdef_4" {
-  source       = "./modules/taskdef"
-  ecr_image    = var.ecr_4
-  taskdef_name = var.app_name_4
+  source               = "./modules/taskdef"
+  ecr_image            = var.ecr_4
+  taskdef_name         = var.app_name_4
+  container_port       = var.app_container_port_4
 }
 
 
@@ -65,7 +69,7 @@ module "app_1" {
   subnet_1_id          = module.vpc.private_subnet_1_id
   subnet_2_id          = module.vpc.private_subnet_2_id
   container_name       = var.app_name_1
-  container_port       = 80
+  container_port       = var.app_container_port_1
   ecs_cluster_id       = "${aws_ecs_cluster.ecs_cluster.id}"
   task_definition      = module.taskdef_1.arn
   target_group_name    = var.app_name_1
@@ -82,7 +86,7 @@ module "app_2" {
   subnet_1_id          = module.vpc.private_subnet_1_id
   subnet_2_id          = module.vpc.private_subnet_2_id
   container_name       = var.app_name_2
-  container_port       = 80
+  container_port       = var.app_container_port_2
   ecs_cluster_id       = "${aws_ecs_cluster.ecs_cluster.id}"
   task_definition      = module.taskdef_2.arn
   target_group_name    = var.app_name_2
@@ -99,7 +103,7 @@ module "app_3" {
   subnet_1_id          = module.vpc.private_subnet_1_id
   subnet_2_id          = module.vpc.private_subnet_2_id
   container_name       = var.app_name_3
-  container_port       = 80
+  container_port       = var.app_container_port_3
   ecs_cluster_id       = "${aws_ecs_cluster.ecs_cluster.id}"
   task_definition      = module.taskdef_3.arn
   target_group_name    = var.app_name_3
@@ -116,7 +120,7 @@ module "app_4" {
   subnet_1_id          = module.vpc.private_subnet_1_id
   subnet_2_id          = module.vpc.private_subnet_2_id
   container_name       = var.app_name_4
-  container_port       = 80
+  container_port       = var.app_container_port_4
   ecs_cluster_id       = "${aws_ecs_cluster.ecs_cluster.id}"
   task_definition      = module.taskdef_4.arn
   target_group_name    = var.app_name_4
