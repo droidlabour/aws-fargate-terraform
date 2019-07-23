@@ -35,6 +35,9 @@ module "taskdef_1" {
   taskdef_name         = var.app_name_1
   container_port       = var.app_container_port_1
   region               = var.region
+  cpu                  = var.cpu_1
+  memory               = var.memory_1
+  container_def_file   = var.container_def_file_1
 }
 
 
@@ -44,6 +47,9 @@ module "taskdef_2" {
   taskdef_name         = var.app_name_2
   container_port       = var.app_container_port_2
   region               = var.region
+  cpu                  = var.cpu_2
+  memory               = var.memory_2
+  container_def_file   = var.container_def_file_2
 }
 
 
@@ -53,6 +59,9 @@ module "taskdef_3" {
   taskdef_name         = var.app_name_3
   container_port       = var.app_container_port_3
   region               = var.region
+  cpu                  = var.cpu_3
+  memory               = var.memory_3
+  container_def_file   = var.container_def_file_3
 }
 
 
@@ -62,6 +71,9 @@ module "taskdef_4" {
   taskdef_name         = var.app_name_4
   container_port       = var.app_container_port_4
   region               = var.region
+  cpu                  = var.cpu_4
+  memory               = var.memory_4
+  container_def_file   = var.container_def_file_4
 }
 
 

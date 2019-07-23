@@ -13,3 +13,15 @@ variable "container_port" {
 variable "region" {
   description = "AWS region"
 }
+
+variable "cpu" {
+  description = "vCPU"
+}
+
+variable "memory" {
+  description = "Memory"
+}
+
+variable "container_def_file" {
+  description = "Container definition filename"
+}

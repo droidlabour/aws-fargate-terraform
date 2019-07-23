@@ -101,3 +101,51 @@ variable "health_3" {
 variable "health_4" {
   default = "/"
 }
+
+variable "cpu_1" {
+  default = "256"
+}
+
+variable "memory_1" {
+  default = "512"
+}
+
+variable "cpu_2" {
+  default = "256"
+}
+
+variable "memory_2" {
+  default = "512"
+}
+
+variable "cpu_3" {
+  default = "256"
+}
+
+variable "memory_3" {
+  default = "512"
+}
+
+variable "cpu_4" {
+  default = "256"
+}
+
+variable "memory_4" {
+  default = "512"
+}
+
+variable "container_def_file_1" {
+  default = "container_def_1.json"
+}
+
+variable "container_def_file_2" {
+  default = "container_def_2.json"
+}
+
+variable "container_def_file_3" {
+  default = "container_def_3.json"
+}
+
+variable "container_def_file_4" {
+  default = "container_def_4.json"
+}

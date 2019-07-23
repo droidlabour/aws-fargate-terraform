@@ -1,5 +1,5 @@
 data "template_file" "container_def" {
-  template = "${file("resources/container_def.json")}"
+  template = "${file("resources/${var.container_def_file}")}"
   vars = {
     name           = var.taskdef_name
     image          = var.ecr_image
@@ -16,9 +16,9 @@ resource "aws_cloudwatch_log_group" "log" {
 
 
 resource "aws_ecs_task_definition" "service" {
-  cpu                      = "256"
+  cpu                      = var.cpu
   family                   = var.taskdef_name
-  memory                   = "512"
+  memory                   = var.memory
   depends_on               = ["aws_iam_role.ecs_task_execution_role"]
   network_mode             = "awsvpc"
   task_role_arn            = "${aws_iam_role.ecs_task_execution_role.arn}"

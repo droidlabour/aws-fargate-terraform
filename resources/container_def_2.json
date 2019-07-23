@@ -1,0 +1,29 @@
+[
+  {
+    "name": "${name}",
+    "image": "${image}",
+    "cpu": 256,
+    "memory": 512,
+    "essential": true,
+    "portMappings": [
+      {
+        "containerPort": ${container_port},
+        "hostPort": ${container_port}
+      }
+    ],
+    "logConfiguration": {
+      "logDriver": "awslogs",
+	  "options": {
+	    "awslogs-group": "${log_group}",
+	    "awslogs-region": "${region}",
+		"awslogs-stream-prefix": "fargate"
+      }
+    },
+    "environment": [
+	  {
+	    "Name": "WhoAmI",
+	    "Value": "2"
+      }
+	]
+  }
+]
