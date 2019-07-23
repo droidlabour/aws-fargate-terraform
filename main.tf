@@ -34,6 +34,7 @@ module "taskdef_1" {
   ecr_image            = var.ecr_1
   taskdef_name         = var.app_name_1
   container_port       = var.app_container_port_1
+  region               = var.region
 }
 
 
@@ -42,6 +43,7 @@ module "taskdef_2" {
   ecr_image            = var.ecr_2
   taskdef_name         = var.app_name_2
   container_port       = var.app_container_port_2
+  region               = var.region
 }
 
 
@@ -50,6 +52,7 @@ module "taskdef_3" {
   ecr_image            = var.ecr_3
   taskdef_name         = var.app_name_3
   container_port       = var.app_container_port_3
+  region               = var.region
 }
 
 
@@ -58,6 +61,7 @@ module "taskdef_4" {
   ecr_image            = var.ecr_4
   taskdef_name         = var.app_name_4
   container_port       = var.app_container_port_4
+  region               = var.region
 }
 
 

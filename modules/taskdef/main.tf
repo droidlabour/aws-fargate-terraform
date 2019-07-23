@@ -3,8 +3,15 @@ data "template_file" "container_def" {
   vars = {
     name           = var.taskdef_name
     image          = var.ecr_image
-	container_port = var.container_port
+    container_port = var.container_port
+    log_group      = var.taskdef_name
+    region         = var.region
   }
+}
+
+
+resource "aws_cloudwatch_log_group" "log" {
+  name = var.taskdef_name
 }
 
 

@@ -9,3 +9,7 @@ variable "ecr_image" {
 variable "container_port" {
   description = "Fargate container port"
 }
+
+variable "region" {
+  description = "AWS region"
+}
