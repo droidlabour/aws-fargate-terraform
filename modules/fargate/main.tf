@@ -8,7 +8,7 @@ resource "aws_lb_target_group" "app" {
   health_check {
     enabled             = true
     interval            = 30
-    path                = "/"
+    path                = var.health
     protocol            = "HTTP"
     timeout             = "10"
     matcher             = "200,202,301"

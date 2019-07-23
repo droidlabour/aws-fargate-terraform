@@ -45,3 +45,7 @@ variable "listener_arn" {
 variable "app_path" {
   description = "Unique path for each app"
 }
+
+variable "health" {
+  description = "Target group health check path"
+}

@@ -85,3 +85,19 @@ variable "ecr_3" {
 variable "ecr_4" {
   default = "mrbarker/python-flask-hello:latest"
 }
+
+variable "health_1" {
+  default = "/"
+}
+
+variable "health_2" {
+  default = "/"
+}
+
+variable "health_3" {
+  default = "/"
+}
+
+variable "health_4" {
+  default = "/"
+}

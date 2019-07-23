@@ -75,6 +75,7 @@ module "app_1" {
   target_group_name    = var.app_name_1
   security_group_id    = module.security_group.fargate_security_group_id
   fargate_service_name = var.app_name_1
+  health               = var.health_1
 }
 
 
@@ -92,6 +93,7 @@ module "app_2" {
   target_group_name    = var.app_name_2
   security_group_id    = module.security_group.fargate_security_group_id
   fargate_service_name = var.app_name_2
+  health               = var.health_2
 }
 
 
@@ -109,6 +111,7 @@ module "app_3" {
   target_group_name    = var.app_name_3
   security_group_id    = module.security_group.fargate_security_group_id
   fargate_service_name = var.app_name_3
+  health               = var.health_3
 }
 
 
@@ -126,6 +129,7 @@ module "app_4" {
   target_group_name    = var.app_name_4
   security_group_id    = module.security_group.fargate_security_group_id
   fargate_service_name = var.app_name_4
+  health               = var.health_4
 }
 
 
